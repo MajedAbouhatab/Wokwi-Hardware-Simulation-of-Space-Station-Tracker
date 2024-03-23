@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "Majed Abouhatab, P.E.",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": 83.7, "left": 120, "rotate": 90, "attrs": { "volume": ".5" } },
+    { "type": "wokwi-serial-port", "id": "ext-serial", "top": 0, "left": 0, "attrs": { "baud": "115200" } }
+  ],
+  "connections": [
+    [ "esp:TX", "ext-serial:RX", "", [] ],
+    [ "esp:RX", "ext-serial:TX", "", [] ],
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "bz1:2", "esp:4", "green", [ "h0", "v18.8" ] ],
+    [ "bz1:1", "esp:5", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
