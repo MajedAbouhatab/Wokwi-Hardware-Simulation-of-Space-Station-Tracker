@@ -1,3 +1,8 @@
+/*
+Details at 
+https://www.hackster.io/abouhatab/wokwi-hardware-simulation-of-space-station-tracker-5a9d7a
+*/
+
 #if defined(ARDUINO_ESP8266_WEMOS_D1MINI)
 #include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
 #include <ESP8266HTTPClient.h>
